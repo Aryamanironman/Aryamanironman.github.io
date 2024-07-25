@@ -1,0 +1,148 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.hide {
+  display: none;
+}
+
+body {
+  padding: 2rem;
+  width: 100%;
+  min-height: 100vh;
+  background-color: pink;
+  display: flex;
+  flex-direction: column;
+}
+
+.container {
+  flex: 1;
+  position: relative;
+  isolation: isolate;
+  width: 100%;
+  max-width: 1200px;
+  margin-inline: auto;
+}
+
+.image-1,
+.image-2 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.image-1 {
+  width: 175px;
+}
+
+.image-2 {
+  width: 250px;
+}
+
+.btn {
+  position: absolute;
+  top: calc(100% - 5rem);
+  min-width: 120px;
+  padding: 0.75rem 1rem;
+  font-size: 1.25rem;
+  outline: none;
+  border: none;
+  background-color: #f8fafc;
+  border-radius: 5px;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background-color: #e2e8f0;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.btn-yes {
+  left: 50%;
+  transform: translateX(calc(-100% - 1rem));
+  z-index: 1;
+}
+
+.btn-no {
+  left: calc(50% + 1rem);
+  transition: all 0.5s ease;
+  z-index: 2;
+}
+
+@keyframes animate {
+  0%, 18%, 20%, 50.1%, 60.1%, 65%, 80.1%, 90%, 92.1%, 100% {
+    color: #da09b7;
+    text-shadow: none;
+  }
+  18.1%, 20.1%, 30%, 50%, 60.1%, 80.1%, 90%, 92.1%, 100% {
+    color: #fcf7fc;
+    text-shadow: 0 0 10px #e457ac,
+                 0 0 20px #be0ace,
+                 0 0 40px #be0ace,
+                 0 0 80px #be0ace,
+                 0 0 160px #be0ace;
+  }
+}
+
+.date-request, .thank-you {
+  text-align: center;
+  font-size: 30px;
+  font-weight: bold;
+  color: #da09b7;
+  text-shadow: 0 0 10px #e457ac,
+               0 0 20px #be0ace,
+               0 0 40px #be0ace,
+               0 0 80px #be0ace,
+               0 0 160px #be0ace;
+  font-family: cursive;
+  animation: animate 5s linear infinite;
+  margin-top: 5%;
+}
+
+.floating-text {
+  position: absolute;
+  font-size: 2rem;
+  color: #da09b7;
+  opacity: 0;
+  transition: opacity 0.5s;
+}
+
+.floating-text.visible {
+  opacity: 1;
+}
+
+.fall {
+  animation: fall 5s forwards;
+}
+
+@keyframes fall {
+  to {
+    transform: translateY(100vh);
+    opacity: 0;
+  }
+}
+
+@media (max-width: 600px) {
+  .btn {
+    min-width: 100px;
+    padding: 0.5rem 0.75rem;
+    font-size: 1rem;
+  }
+
+  .image-1 {
+    width: 125px;
+  }
+
+  .image-2 {
+    width: 175px;
+  }
+
+  .date-request, .thank-you {
+    font-size: 20px;
+  }
+}
