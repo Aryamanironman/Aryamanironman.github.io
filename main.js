@@ -8,7 +8,7 @@ const dateRequest = document.querySelector(".date-request");
 
 const texts = [
   "Are you sure?",
-  "Cant be ur Xaden or Carden but I can be ur ironman",
+  "I could give my soul to spend few hours with you",
   "Please?",
   "Just think about it!",
   "uhmmmmm hmmmmm",
@@ -16,7 +16,7 @@ const texts = [
   "Just one date!",
   "Please say yes!",
   "Come on, please!",
-  "I lOVE YUKI!!",
+  "I lOVE kpop!!",
   "love the determination!!"
 ];
 
