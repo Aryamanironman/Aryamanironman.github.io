@@ -99,7 +99,7 @@ body {
                0 0 40px #be0ace,
                0 0 80px #be0ace,
                0 0 160px #be0ace;
-  font-family: cursive;
+  font-family: Georgia, serif;;
   animation: animate 5s linear infinite;
   margin-top: 5%;
 }
